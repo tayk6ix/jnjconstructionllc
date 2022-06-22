@@ -58,9 +58,7 @@ header{
 
 }
 #logo{
-    position: absolute;
-    width: 10%;
-    left: 45%;
+    width: 100%;
 }
 
 .call_now{
@@ -393,12 +391,16 @@ header{
 
 .contact_us {
     @include flex(column, center, center);
-    a{
+    &__title{
+        margin-top: 10vh;
         text-decoration: none;
+        &__h2{
+            @include fonts($fontL2, 1.5rem);
+            color: $bright-red;
+        }
     }
-    iframe{
-        width: 100%
-    }
+
+
     &__info{
         @include flex(column, center, space-between);
         gap: 2rem;
@@ -413,6 +415,9 @@ header{
                 color: $white;  
             }
         }
+    }
+    .mobile.mapouter , .mobile.gmap_canvas , iframe{
+        width: 100vw;
     }
 }
 

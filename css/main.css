@@ -67,9 +67,7 @@ header img {
 }
 
 #logo {
-  position: absolute;
-  width: 10%;
-  left: 45%;
+  width: 100%;
 }
 
 .call_now a {
@@ -601,12 +599,16 @@ header img {
           justify-content: center;
 }
 
-.contact_us a {
+.contact_us__title {
+  margin-top: 10vh;
   text-decoration: none;
 }
 
-.contact_us iframe {
-  width: 100%;
+.contact_us__title__h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #092a51;
 }
 
 .contact_us__info {
@@ -651,6 +653,10 @@ header img {
   padding: 15px;
   background-color: #e85e36;
   color: #f5f3f4;
+}
+
+.contact_us .mobile.mapouter, .contact_us .mobile.gmap_canvas, .contact_us iframe {
+  width: 100vw;
 }
 
 footer {
