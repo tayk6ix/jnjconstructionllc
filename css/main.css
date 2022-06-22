@@ -67,9 +67,7 @@ header img {
 }
 
 #logo_a {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 35vw;
 }
 
 #logo_a #logo {
