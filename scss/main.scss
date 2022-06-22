@@ -57,8 +57,12 @@ header{
     }
 
 }
-#logo{
-    width: 100%;
+#logo_a{
+    width: fit-content;
+    #logo{
+        width: 100%;
+    }
+
 }
 
 .call_now{
