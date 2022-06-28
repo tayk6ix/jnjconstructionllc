@@ -12,7 +12,5 @@ $headers = "From: noreply@jnjconstructionllc.net" . "\r\n" .
     "CC: somebodyelse@example.com";
 if ($email != null) {
     mail($to, $subject, $txt, $headers);
-    echo '<script language="javascript">';
-    echo 'alert("message successfully sent")';
-    echo '</script>';
+    header("Location:index.html");
 }
