@@ -12,5 +12,5 @@ $headers = "From: noreply@jnjconstructionllc.net" . "\r\n" .
     "CC: somebodyelse@example.com";
 if ($email != null) {
     mail($to, $subject, $txt, $headers);
-    header("Location:index.html");
+    header("Location:thankyou.html");
 }
