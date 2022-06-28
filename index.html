@@ -238,7 +238,7 @@
             <!-- Form of PHP should be replaced later -->
             <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScm_cQ6XFrB58NS0IiqQAV2fmL_ILR0RwB-hPiRzXkYkCqlbA/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
             <div class="contact_us__info">
-                <form onsubmit="sendEmail(); reset(); return false;" class="contact_us__form desktop">
+                <form action="main.php" method="post" class="contact_us__form desktop">
                         <h2>Contact Us</h2>
                         <div id="input_names" class="contact_us__form__inputs">
                             <div class="contact_us__form__inputs__name">
@@ -320,7 +320,7 @@
         </div>
         <!-- <p id="policy_footer">policy</p> -->
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js">
+    <!-- <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script>
         function sendEmail(){
@@ -334,7 +334,7 @@
                 message => alert("Message Sent Succesfully. We'll be in contact shorty!")
                 );
             }
-    </script>
+    </script> -->
     <script src="/script.js"></script>
     
 </body>
