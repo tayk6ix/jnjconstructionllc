@@ -817,6 +817,7 @@ nav ul li a {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-right: 17vw;
   }
   .desktop_menu__list {
     display: -webkit-box;

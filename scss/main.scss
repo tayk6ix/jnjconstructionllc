@@ -550,6 +550,7 @@ nav{
     .desktop_menu{
         display: flex;
         order: 2;
+        margin-right: 17vw;
         &__list{
             @include flex(row, center, space-between);
             width: 40vw;
