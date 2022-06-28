@@ -10,7 +10,7 @@ $subject = $_POST['subject'];
 $txt = "Name = " . $first_name . $last_name . "\r\n  Email = " . $email . "\r\n  Phone # = " . $phone . "\r\n Message =" . $message;
 $headers = "From: noreply@jnjconstructionllc.net" . "\r\n" .
     "CC: somebodyelse@example.com";
-if ($email != null) {
+if (isset($_POST['submit']) && $email != null) {
     mail($to, $subject, $txt, $headers);
-    header("Location:thankyou.html");
+    header("Location:index.html?mailsend");
 }
