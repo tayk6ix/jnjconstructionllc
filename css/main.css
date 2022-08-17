@@ -1247,7 +1247,7 @@ nav ul li a {
     height: 40px;
     width: 70%;
   }
-  .contact_us__form input[type=submit] {
+  .contact_us__form button {
     margin-top: 25px;
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -1259,7 +1259,7 @@ nav ul li a {
     padding: 15px 0;
     cursor: pointer;
   }
-  .contact_us__form input[type=submit]:hover {
+  .contact_us__form button:hover {
     color: #092a51;
   }
   .contact_us__form__inputs {

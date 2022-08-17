@@ -822,7 +822,7 @@ nav{
                 height: 40px;
                 width: 70%;  
             }
-            input[type=submit]{
+            button{
                 margin-top: 25px;
                 @include fonts($fontL2, 1.3rem);
                 background-color: $light-red;
@@ -832,7 +832,7 @@ nav{
                 padding: 15px 0;
                 cursor: pointer;
             }
-            input[type=submit]:hover{
+            button:hover{
                 color: $bright-red;
             }
             &__inputs{

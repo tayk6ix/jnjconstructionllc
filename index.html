@@ -7,27 +7,44 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>J&J Construction, LLC.</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('uJVnLUrSka5G8nsrA');
+        })();
+    </script>
+    <script type="text/javascript">
+        // window.onload = function() {
+        //     document.getElementById('contact-form').addEventListener('submit', function(event) {
+        //         event.preventDefault();
+        //         // generate a five digit number for the contact_number variable
+        //         this.contact_number.value = Math.random() * 100000 | 0;
+        //         // these IDs from the previous steps
+        //         var params = {
+        //             first_name: document.getElementById('first_name').value, 
+        //             last_name: document.getElementById('last_name').value, 
+        //             form_subject: document.getElementById('form_subject').value, 
+        //             form_email: document.getElementById('form_email').value, 
+        //             form_phone: document.getElementById('form_phone').value, 
+        //             form_message: document.getElementById('form_message').value, 
+        //         }
+        //         emailjs.sendForm('service_q84tx5w', 'template_cnnzfmo', this)
+        //         .then(function() {
+        //                 console.log(this);
+        //                 console.log('SUCCESS!');
+        //                 alert('Thank you for contacting us! We will be in contact shortly');
+        //             }, function(error) {
+        //                 console.log('FAILED...', error);
+        //             });
+        //     });
+        // }
+
+    </script>
 </head>
 <body>
     <div id="home" class="home">
         <header class="header">
-            <!-- <button class="🍔 mobile">
-                <img src="./img/hamburguer.png" alt="Closed Menu" id="closed" class="active">
-            </button> -->
-            <!-- <div id="mobile_menu" class="menu_mobile mobile not_active">
-                <button id="opened_menu">
-                    <img src="./img/close-icon.png" alt="Opened Menu" id="opened_symbol">
-                </button>
-                <div class="menu_mobile__list">
-                    <a href="#home">HOME</a>
-                    <a href="#jump_to_services">SERVICES</a>
-                    <a href="#jump_to_about">ABOUT US</a>
-                    <a href="#jump_to_projects">PROJECTS</a>
-                    <a href="#jump_to_contact_us">CONTACT US</a>
-                </div>
-            </div> -->
             <a href="#home" id="logo_a"><img src="./img/LOGO.jpg" alt="Logo" id="logo"></a>
-
             <div class="desktop_menu desktop">
                 <ul class="desktop_menu__list">
                     <li><a href="#home">HOME</a></li>
@@ -37,17 +54,9 @@
                     <li><a href="#jump_to_contact_us">CONTACT US</a></li>
                 </ul>
             </div>
-            <!-- <div class="call_now">
-                <a href="tel:3145326893">
-                    Call Us!
-                </a>
-            </div> -->
         </header>
         <section id="home_landing" class="landing">
             <div class="landing_organizer_first">
-                <!-- <article class="title">
-                    <h1 id="jnj">J&J CONSTRUCTION</h1>
-                    <h2 id="llc">LLC</h2>
                 </article> -->
                 <article class="slogan">
                     <h2 id="slogan">MAKING DREAMS INTO REALITIES</h2>
@@ -75,8 +84,6 @@
                             <h3 class="services_explained_title">SIDING</h3>
                         </div>
                         <div class="card__face card__face__back">
-                            <!-- <p>The beginning and root of our company has always been the installation of siding. We have mastered siding through out our years in the industry and through that proccess we have been able to incorporate different materials and tecniques that has put us at a outstanding quality level. Some of those material include:
-                            </p> -->
                             <ul>
                                 <li>Hardie Board</li>
                                 <li>Vinyl</li>
@@ -148,20 +155,6 @@
                         <div class="read_more_div"></div>
                     </a>
                 </article>
-                <!-- <ul class="about__card__facts">
-                    <li>
-                        <p>Minority Owned</p>
-                        <p>Over 80% of our employees are minority exmployees/p>
-                    </li>
-                    <li>
-                        <p>100+</p>
-                        <p>High Quality Projects Finished</p>
-                    </li>
-                    <li>
-                        <p>NATIONAL</p>
-                        <p>Worked in many States of the United States</p>
-                    </li>
-                </ul> -->
             </div>
         </section>
         <div class="between_about_projects" id="jump_to_projects"></div>
@@ -228,18 +221,13 @@
                     </div>
                 </div>
             </div>
-            <!-- <a href="./projects.html" class="read_more">
-                <div class="read_more_div">READ MORE</div>
-            </a>    -->
-
         </section>
         <section id="jump_to_contact_us" class="contact_us">
             <a class="contact_us__title mobile" href="./contact_us.html"><h2 class  ="contact_us__title__h2">CONTACT US</h2></a>
-            <!-- Form of PHP should be replaced later -->
-            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScm_cQ6XFrB58NS0IiqQAV2fmL_ILR0RwB-hPiRzXkYkCqlbA/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
             <div class="contact_us__info">
-                <form action="/main.php" method="post" class="contact_us__form desktop">
+                <form id="contact-form" class="contact_us__form desktop">
                         <h2>Contact Us</h2>
+                        <input type="hidden" name="contact_number">
                         <div id="input_names" class="contact_us__form__inputs">
                             <div class="contact_us__form__inputs__name">
                                 <label class="form_label" for="first_name">First name</label>
@@ -272,19 +260,12 @@
                             <p class="contact_us__form__inputs__no_input">Incorrect Input</p>
                             <textarea id="form_message" name="message" rows="5" cols="50" type="tex" placeholder="Hello there!" tabindex="6" required></textarea>
                         </div>
-
-                        <input name="submit" type="submit" value="Submit"></input>
+                        <button onclick="SendMail()" name="submit">Send</button>
                     </form>
                 <div class="contact_us__info__card">
-                    <!-- <a class="contact_us__info__card" id="phone_link" href="tel:3145326893">
-                        <img src="./img/phone.png" alt="Phone">
-                        <p>(314)532-6893</p>
-
-                    </a> -->
                     <a class="contact_us__info__card" id="email_link" href="mailto:jnj_construction@outlook.com">
                         <img src="./img/email.png" alt="Email" >
-                        <p>jnjconstruction@icloud.com</p>
-
+                        <p>jnj_construction@outlook.com</p>
                     </a>
                     <div class="contact_us__info__card" id="location_card">
                         <img src="./img/location_pin.png" alt="Location Icon" >
@@ -294,13 +275,10 @@
             </div>
                 <div class="mobile mapouter"><div class="mobile gmap_canvas"><iframe class="mobile" width="325" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=Rogers,%20Arkansas&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:350px;width:325px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:325px;}</style></div></div>
                 <div class="desktop mapouter"><div class="desktop gmap_canvas"><iframe class="desktop" width="960" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Rogers,%20Arkansas&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org">putlocker</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:960px;}</style><a href="https://www.embedgooglemap.net">embed google map without iframe</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:960px;}</style></div></div>
-
         </section>
     </main>
     <footer>
         <img src="/img/LOGO.jpg" id="logo_footer" alt="Logo">
-
-
         <div class="footer_social">
             <a href=""><img src="./img/linked-in.png" alt="LinkedIn" class="social_icons"></a>
             <a href="https://www.instagram.com/jnjconstruction2020/"><img src="./img/instagram2.png" alt="Instagram" class="social_icons"></a>
@@ -318,31 +296,7 @@
         <div id="contact_us_footer">
             <a href="#jump_to_contact_us">CONTACT US</a>
         </div>
-        <!-- <p id="policy_footer">policy</p> -->
     </footer>
-    <!-- <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-        function sendEmail(){
-                Email.send({
-                    SecureToken: "3c65a157-3d31-43e3-9e40-da04dcff9bd9",
-                    To : "jl435063@hotmail.com",
-                    From : document.getElementById("form_email").value,
-                    Subject : document.getElementById("form_subject").value,
-                    Body : "First Name: " + document.getElementById("first_name").value + "<br> Last Name: " + document.getElementById("last_name").value + "<br> Email: " + document.getElementById("form_email").value + "<br> Phone #: " + document.getElementById("form_phone").value +"<br> Message: " + document.getElementById("form_message").value
-                }).then(
-                message => alert("Message Sent Succesfully. We'll be in contact shorty!")
-                );
-            }
-    </script> -->
-    <script src="/script.js"></script>
-    
+    <script src="/script.js"></script> 
 </body>
 </html>
-
-
-<!-- <div id="Jay">
-<h2>Jay</h2>
-<img src="./img/minecraft_picture.png" alt="">
-
-</div> -->

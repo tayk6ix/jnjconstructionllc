@@ -186,3 +186,23 @@ slideshowSlide.addEventListener("transitionend", function(){
 
 secondNumber.textContent = slideshowImages.length -2;
 
+
+// COntact Form
+function SendMail() {
+    var params = {
+        first_name: document.getElementById('first_name').value, 
+        last_name: document.getElementById('last_name').value, 
+        form_subject: document.getElementById('form_subject').value, 
+        form_email: document.getElementById('form_email').value, 
+        form_phone: document.getElementById('form_phone').value, 
+        form_message: document.getElementById('form_message').value
+    }
+    emailjs.send('service_q84tx5w', 'template_cnnzfmo', params).then(function() {
+                
+                console.log('SUCCESS!');
+                console.log(params);
+                alert('Thank you for contacting us! We will be in contact shortly');
+            }, function(error) {
+                console.log('FAILED...', error);
+    });
+}
