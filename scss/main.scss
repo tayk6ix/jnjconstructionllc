@@ -57,9 +57,11 @@ header{
 
 }
 #logo_a{
-    width: 35vw;
+    width: fit-content;
+    height: fit-content;
     #logo{
-        width: 100%;
+        width: 50%;
+        height: 100%;
     }
 
 }
@@ -365,22 +367,27 @@ header{
                         height: 100%;
                     }
                     .img{
-                        position: absolute;
-                        bottom: 0;
-                        @include flex(column, center, center);
-                        &__location{
-                            display: none;
-                            background-color: $white;
-                            width: 40%;
-                            height: 3rem;
-                            text-align: center;
-                        }
-                        &__desc{
-                            display: none;
-                            background-color: $white;
+                        display: none;
+                        &__desc, &__location{
+                            display: flex;
+                            color: $white;
+                            background-color: transparent;
                             text-align: center;
                             width: 75%;
                         }
+                        &__location{
+                            @include fonts($fontL2, 1.3rem);
+                        }
+                    }
+                    .img.active{
+                        position: absolute;
+                        bottom: 0;
+                        @include flex(column, center, center);
+                        gap: 2rem;
+                        background-color: rgba(0, 0, 0, 0.3);
+                        height: inherit;
+                        width: 300px;
+                        
                     }
                     
                 }
