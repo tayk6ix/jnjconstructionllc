@@ -59,7 +59,7 @@ $(window).resize(function(){
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 50) {
         $('.header').css('background','rgb(244, 246, 247)');
-        $('.desktop_menu__list li a').css('color','#0b090A');
+        $('.desktop_menu__list li a').css('color','rgb(232,94,54)');
         } 
         else {
         $('.header').css('background','transparent');

@@ -76,7 +76,7 @@ header img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgb(232, 94, 54);
+  color: #e85e36;
   text-decoration: none;
 }
 .call_now a img {
@@ -131,22 +131,62 @@ header img {
   color: #f5f3f4;
 }
 
-.scroll:hover img {
-  transform: translateY(0.9em);
+.arrow {
+  position: absolute;
+  top: 90vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
 }
 
-.scroll p {
-  color: #f5f3f4;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 1.1rem;
-}
-.scroll img {
-  width: 60px;
-  -webkit-animation: transform 1s ease-in-out forwards;
-          animation: transform 1s ease-in-out forwards;
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #f5f3f4;
+  border-right: 5px solid #f5f3f4;
+  transform: rotate(45deg);
+  margin: -10px;
+  -webkit-animation: animate 2s infinite;
+          animation: animate 2s infinite;
 }
 
+.arrow span:nth-child(2) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
 .services__title {
   padding: 30px 10vw;
 }
@@ -213,25 +253,35 @@ header img {
 }
 .services__explained .card__face__front h3 {
   color: #f5f3f4;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
 }
 .services__explained .card__face__back {
   transform: rotateX(180deg);
-  background-color: rgb(232, 94, 54);
+  background-color: #e85e36;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.services__explained .card__face__back li {
+.services__explained .card__face__back ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.services__explained .card__face__back ul li {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.1rem;
   color: white;
 }
 
 .read_more {
   display: flex;
-  color: rgb(232, 94, 54);
+  color: #e85e36;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -445,8 +495,11 @@ header img {
 }
 .contact_us__info__card p {
   padding: 15px;
-  background-color: rgb(232, 94, 54);
+  background-color: #e85e36;
   color: #f5f3f4;
+}
+.contact_us__info #email_link:-webkit-any-link {
+  text-decoration: none;
 }
 .contact_us .mobile.mapouter, .contact_us .mobile.gmap_canvas, .contact_us iframe {
   width: 100vw;
@@ -489,7 +542,7 @@ footer .footer_nav a {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  color: rgb(232, 94, 54);
+  color: #e85e36;
 }
 footer #contact_us_footer a {
   text-decoration: none;
@@ -567,6 +620,7 @@ nav ul li a {
     display: flex;
     order: 2;
     margin-right: 17vw;
+    height: 100%;
   }
   .desktop_menu__list {
     display: flex;
@@ -574,11 +628,22 @@ nav ul li a {
     align-items: center;
     justify-content: space-between;
     width: 40vw;
+    height: 100%;
     list-style: none;
   }
+  .desktop_menu__list li {
+    height: inherit;
+  }
   .desktop_menu__list li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
     color: #f5f3f4;
     text-decoration: none;
+    transition: all 300ms ease-in-out;
+  }
+  .desktop_menu__list li a:hover {
+    font-size: 19px;
   }
   .landing {
     height: 100vh;
@@ -707,10 +772,13 @@ nav ul li a {
   }
   .about__card__article h2 {
     font-size: 3rem;
+    margin: 0;
+    padding: 1rem;
   }
   .about__card__article p {
     font-size: 1.2rem;
     line-height: 2rem;
+    padding: 1rem;
   }
   .about__card__article__boy {
     height: 45vh;
@@ -815,7 +883,7 @@ nav ul li a {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 2rem;
-    color: rgb(232, 94, 54);
+    color: #e85e36;
   }
   .contact_us__form input, .contact_us__form textarea {
     font-family: "Lato", sans-serif;
@@ -930,7 +998,7 @@ nav ul li a {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
-    color: rgb(232, 94, 54);
+    color: #e85e36;
   }
   footer #contact_us_footer {
     grid-area: 1/3/2/4;

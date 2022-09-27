@@ -7,39 +7,6 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>J&J Construction, LLC.</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('uJVnLUrSka5G8nsrA');
-        })();
-    </script>
-    <script type="text/javascript">
-        // window.onload = function() {
-        //     document.getElementById('contact-form').addEventListener('submit', function(event) {
-        //         event.preventDefault();
-        //         // generate a five digit number for the contact_number variable
-        //         this.contact_number.value = Math.random() * 100000 | 0;
-        //         // these IDs from the previous steps
-        //         var params = {
-        //             first_name: document.getElementById('first_name').value, 
-        //             last_name: document.getElementById('last_name').value, 
-        //             form_subject: document.getElementById('form_subject').value, 
-        //             form_email: document.getElementById('form_email').value, 
-        //             form_phone: document.getElementById('form_phone').value, 
-        //             form_message: document.getElementById('form_message').value, 
-        //         }
-        //         emailjs.sendForm('service_q84tx5w', 'template_cnnzfmo', this)
-        //         .then(function() {
-        //                 console.log(this);
-        //                 console.log('SUCCESS!');
-        //                 alert('Thank you for contacting us! We will be in contact shortly');
-        //             }, function(error) {
-        //                 console.log('FAILED...', error);
-        //             });
-        //     });
-        // }
-
-    </script>
 </head>
 <body>
     <div id="home" class="home">
@@ -47,23 +14,24 @@
             <a href="#home" id="logo_a"><img src="./img/LOGO.jpg" alt="Logo" id="logo"></a>
             <div class="desktop_menu desktop">
                 <ul class="desktop_menu__list">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#jump_to_services">SERVICES</a></li>
-                    <li><a href="#jump_to_about">ABOUT US</a></li>
-                    <li><a href="#jump_to_projects">PROJECTS</a></li>
-                    <li><a href="#jump_to_contact_us">CONTACT US</a></li>
+                    <li><a href="#home"><p>HOME</p></a></li>
+                    <li><a href="#jump_to_services"><p>SERVICES</p></a></li>
+                    <li><a href="#jump_to_about"><p>ABOUT US</p></a></li>
+                    <li><a href="#jump_to_projects"><p>PROJECTS</p></a></li>
+                    <li><a href="#jump_to_contact_us"><p>CONTACT US</p></a></li>
                 </ul>
             </div>
         </header>
         <section id="home_landing" class="landing">
             <div class="landing_organizer_first">
-                </article> -->
+                </article> 
                 <article class="slogan">
                     <h2 id="slogan">MAKING DREAMS INTO REALITIES</h2>
                 </article>
-                <a href="#jump_to_services"  id="jump_to_services" class="scroll">
-                    <p id="scroll">SCROLL</p>
-                    <img src="./img/scroll.png" alt="Scroll-icon" id="scroll_icon">
+                <a href="#jump_to_services" id="jump_to_services" class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </a>
             </div>
         </section>
@@ -81,7 +49,7 @@
                     <div class="card__inner">
                         <div class="card__face card__face__front">
                             <img src="./img/siding.png" alt="" class="services_explained_img">
-                            <h3 class="services_explained_title">SIDING</h3>
+                            <h3 class="services_explained_title">Siding</h3>
                         </div>
                         <div class="card__face card__face__back">
                             <ul>
@@ -168,10 +136,10 @@
                     <div class="projects__slide__controlorg__container">
                         <div class="projects__slide__controlorg__container__arrows">
                             <button id="left_slide">
-                                <img src="./img/arrow.png" alt="" class="arrow">
+                                <img src="./img/arrow.png" alt="">
                             </button>
                             <button  id="right_slide">
-                                <img src="./img/arrow.png" alt="" class="arrow">
+                                <img src="./img/arrow.png" alt="">
                             </button>
                         </div>
                         <div class="projects__slide__controlorg__container__numbers">
@@ -225,9 +193,9 @@
         <section id="jump_to_contact_us" class="contact_us">
             <a class="contact_us__title mobile" href="./contact_us.html"><h2 class  ="contact_us__title__h2">CONTACT US</h2></a>
             <div class="contact_us__info">
-                <form id="contact-form" class="contact_us__form desktop">
+                <form id="contact-form" action="https://formsubmit.co/jnj_construction@outlook.com" method="POST" class="contact_us__form desktop">
                         <h2>Contact Us</h2>
-                        <input type="hidden" name="contact_number">
+                        <input type="hidden" name="_subject" value="New Offer!!!">
                         <div id="input_names" class="contact_us__form__inputs">
                             <div class="contact_us__form__inputs__name">
                                 <label class="form_label" for="first_name">First name</label>
@@ -240,6 +208,7 @@
                                 <input  class="form_input" id="last_name" name="last_name" type="text"  tabindex="2" required>
                             </div>
                         </div>
+                        <input type="hidden" name="_next" value="https://jnjconstructionllc.net/pages/thankyou.html">
                         <div id="input_email" class="contact_us__form__inputs">
                             <label class="form_label" for="email">Email</label>
                             <p class="contact_us__form__inputs__no_input">Incorrect Input</p>
@@ -260,7 +229,7 @@
                             <p class="contact_us__form__inputs__no_input">Incorrect Input</p>
                             <textarea id="form_message" name="message" rows="5" cols="50" type="tex" placeholder="Hello there!" tabindex="6" required></textarea>
                         </div>
-                        <button onclick="SendMail()" name="submit">Send</button>
+                        <button name="submit">Send</button>
                     </form>
                 <div class="contact_us__info__card">
                     <a class="contact_us__info__card" id="email_link" href="mailto:jnj_construction@outlook.com">
